@@ -1,5 +1,5 @@
 def custom_write(file_name, strings: list):
-  file = open(f'{file_name}', 'w')
+  file = open(f'{file_name}', 'w', encoding='utf-8')
   string = int()
   crs = int()
   keylist = []
@@ -7,8 +7,8 @@ def custom_write(file_name, strings: list):
   for i in strings:
     string = 1 + strings.index(i)
     crs = file.tell()
-    file.write(f'{i} \n')
-    file.close
+    file.write(f'{i}\n')
+    file.close()
     keylist.append((string, crs))
     valuelist.append(i)
   strings_positions = dict(zip(keylist, valuelist))
