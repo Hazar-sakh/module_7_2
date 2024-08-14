@@ -7,7 +7,7 @@ def custom_write(file_name, strings: list):
     for i in strings:
         string = 1 + strings.index(i)
         crs = file.tell()
-        file.write(f'{i} \n')
+        file.write(f'{i}\n')
         keylist.append((string, crs))
         valuelist.append(i)
     strings_positions = dict(zip(keylist, valuelist))
